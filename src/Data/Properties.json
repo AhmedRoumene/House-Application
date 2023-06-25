@@ -2,58 +2,77 @@
     "id" :1 ,
     "Name" : "Birla House" ,
     "Price" :26000 ,
-    "City" :"San Francisco"
+    "City" :"San Francisco",
+    "SellRent" : 2,
+    "Image" : "House1.jpg"
   },
   {
     "id" :2 ,
     "Name" : "Rose Villa" ,
     "Price" :15000 ,
-    "City" :"Los Angeles"
+    "City" :"Los Angeles",
+    "SellRent" : 2,
+    "Image" : "House8.jpg"
   },
   {
     "id" :3 ,
     "Name" : "Pearl House" ,
     "Price" :18000 ,
-    "City" :"California"
+    "City" :"California",
+    "SellRent" : 2,
+    "Image" : "House7.jpg"
   },
   {
     "id" :4 ,
     "Name" : "Marlin House" ,
     "Price" :56000 ,
-    "City" :"New York"
+    "City" :"New York",
+    "SellRent" : 1,
+    "Image" : "House4.jpg"
   },
   {
     "id" :5 ,
     "Name" : "Secret House" ,
     "Price" :65000 ,
-    "City" :"Miami"
+    "City" :"Miami" ,
+    "SellRent" : 1,
+    "Image" : "House7.jpg"
   },
   {
     "id" :6 ,
     "Name" : "Funny House" ,
     "Price" :4000 ,
-    "City" :"Chicago"
+    "City" :"Chicago",
+    "SellRent" : 2,
+    "Image" : "House8.jpg"
   },{
     "id" :7 ,
     "Name" : "Fuck House" ,
     "Price" :18000 ,
-    "City" :"Denver"
+    "City" :"Denver",
+    "SellRent" : 1
   },
   {
     "id" :8 ,
     "Name" : "Shitty House" ,
     "Price" :18000 ,
-    "City" :"California"
+    "City" :"California",
+    "SellRent" : 1,
+    "Image" : "House10.jpg"
   } ,
   {
       "id" :9 ,
     "Name" : "Happy House" ,
     "Price" :18000 ,
-    "City" :"Portland"
+    "City" :"Portland",
+    "SellRent" : 2
   },
   {
     "id" :10 ,
   "Name" : "Service House" ,
   "Price" :18000 ,
-  "City" :"Austin"
+  "City" :"Austin",
+    "SellRent" : 1,
+    "Image" : "House6.jpg"
+
 }]
