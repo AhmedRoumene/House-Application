@@ -5,37 +5,85 @@
                 Register
             </div>
             <div class="card-body">
-                <form>
+                <form [formGroup]="registrationForm" (ngSubmit)="OnSubmit()">
                     <div class="form-group col-12">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control"
+                            formControlName="userName">
+
+                        <span class="error-block"
+                            *ngIf="!getUserName()?.valid &&
+                            getUserName()?.touched">
+                            Please enter your name
+                        </span>
                     </div>
 
                     <div class="form-group col-12">
                         <label for="email" class="form-label">Email</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control"
+                            formControlName="email">
+
+                        <span *ngIf="!email.valid && email.touched"
+                            class="error-block">
+                            <span *ngIf="email.hasError('required')">
+                                Please enter your email address
+                            </span>
+                            <span *ngIf="email.hasError('email')">
+                                Please enter your email address
+                            </span>
+                        </span>
                     </div>
 
                     <div class="form-group col-12">
-                        <label for="passwrod" class="form-label">Password</label>
-                        <input type="text" class="form-control">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control"
+                            formControlName="password">
+
+                        <span *ngIf="!password.valid && password.touched"
+                            class="error-block">
+                            <span *ngIf="!password.hasError('required')">
+                                Please enter password
+                            </span>
+                            <span *ngIf="password.hasError('minlength')">
+                                password should be lesser than 8
+                            </span>
+                        </span>
                     </div>
 
-                    <div class="form-group col-12">
+                    <div class=" form-group col-12">
                         <label for="cpassword" class="form-label">Confirm
                             Password</label>
-                        <input type="text" class="form-control">
+                        <input type="password" class="form-control"
+                            formControlName="confirmPassword">
+
+                        <span
+                            *ngIf="!confirmPassword.valid && confirmPassword.touched">
+                            <span *ngIf="confirmPassword.hasError('required')">
+                                Please confirm password
+                            </span>
+                        </span>
+                        <span
+                            *ngIf="registrationForm.hasError('notMatched') && confirmPassword.valid">
+                            password not matched
+                        </span>
+
                     </div>
 
                     <div class="form-group col-12">
                         <label for="mobile" class="form-label">Mobile</label>
-                        <input type="text" class="form-control">
+                        <input type="number" class="form-control"
+                            formControlName="mobile">
                     </div>
 
                     <div class="form-group col-12">
                         <button type="submit" class="btn btn-primary">Save</button>
-                        <button type="reset" class="btn btn-secondary m-2">Cancel</button>
+                        <button type="reset"
+                            class="btn btn-secondary m-2">Cancel</button>
                     </div>
+                    {{registrationForm.value | json }}
+                    <br>
+                    {{registrationForm.valid}}
+
                 </form>
             </div>
         </div>
